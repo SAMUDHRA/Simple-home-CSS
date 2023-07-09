@@ -1,0 +1,151 @@
+.house{
+    width: 1000px;
+    height: 500px;
+    background: #ccc;
+    margin: auto;
+    margin-top: 70px;
+    padding: 100px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+.tflex{
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid lightslategray;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    margin-right: auto;
+    margin-left: 200px;
+    margin-top: 205px;
+}
+.pflex{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(255, 53, 53);
+    margin-left: 350px;
+    margin-bottom: 0px;
+    margin-top: -100px;
+    transform: skewX(45deg);
+    border: 1.5px solid black;
+}
+.square{
+    width: 200px;
+    height: 206px;
+    background-color: rgb(214, 149, 106);
+    margin-left: 200px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+.rectangle{
+    width: 400px;
+    height: 206px;
+    background-color: rgb(214, 149, 106);
+    margin-left: 400px;
+    margin-top: -206.5px; 
+    border: 1px solid black;
+}
+th,td{
+    border: 3px solid black;
+}
+table{
+    position: absolute;
+    border-collapse: collapse;
+    height: 70px;
+    width: 70px;
+    margin: 60px 90px  190px ;
+}
+.door{
+    position: absolute;
+    /* bottom: 100px;
+    left: 36%; */
+    margin-left: 125px;
+    margin-top: 50px;
+    transform: translate(-80%);
+    width: 100px;
+    height: 140px;
+    background: #4d2418;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-bottom: -170px;
+    border: 2px solid black;   
+}
+.base{
+    width: 250px;
+    height: 90px;
+    background-color: white;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    box-shadow: 0 20px 0 0 rgba(0, 0, 0, 0.2);
+    margin: -160px;
+    margin-left: -50px;
+    position: absolute;
+    animation-name: Slidetoright;
+    animation-duration: 60s;
+    animation-iteration-count: infinite ;
+}
+.box {
+    width: 100px;
+    height: 130px;
+    background-color: white;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    margin: 10px;
+    margin-left: -100px;
+    margin-top: 45px;
+    position: absolute;
+} 
+.cloud{
+    position: absolute;
+    width: 180px;
+    height: 200px;
+    background-color: white;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    margin-left: 100px;
+    margin-top: -100px;
+    
+}
+.rain{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    margin-left: -50px;
+}
+.rain span{
+    position: relative;
+    bottom: -100px;
+    width: 10px;
+    height: 10px;
+    background: lightblue;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: animate 10s linear infinite;
+    animation-duration: calc(25s / var(--i));
+}
+@keyframes animate{
+    0%
+    {
+        transform: translateY(0) scale(1);
+    }
+    70%
+    {
+        transform: translateY(300px) scale(1);
+    }
+    100%
+    {
+        transform: translateY(300px) scale(0);
+    }
+}
+@keyframes Slidetoright{
+    50%{transform: translateX(400px);}
+}
